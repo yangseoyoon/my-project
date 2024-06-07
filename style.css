@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 75rem;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+  background-color: aqua;
+}
+
+.container-top {
+  display: flex;
+  padding-inline: 0;
+  margin-bottom: 40px;
+  background-color: black;
+}
+.container-top p {
+  margin-inline: 10px;
+  margin-bottom: 0;
+  color: white;
+}
+
+.container-P {
+  background-color: chartreuse;
+}
+
+.container-B {
+  display: flex;
+  text-align: center;
+  background-color: bisque;
+}
+.container-B p {
+  margin-inline: 120px;
+}
