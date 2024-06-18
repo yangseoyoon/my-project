@@ -36,18 +36,23 @@ p {
 
 .animated-text {
   display: inline-block;
-  padding-right: 100%;
-  animation: scrolltext 20s linear infinite;
+  padding-left: 100%;
+  animation: scrolltext 10s linear infinite;
 }
 
 @keyframes scrolltext {
   0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
     transform: translateX(100%);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.container {
+  max-width: 100%;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .header {
@@ -60,29 +65,22 @@ p {
   background-color: #dbdde0;
 }
 
-.container,
-.header {
-  max-width: 100%;
-  padding-inline: 1.5rem;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.header p {
+.container p {
+  display: flex;
   margin-inline: 10px;
   margin-bottom: 0;
   color: #656566;
 }
 
-.header p a:link {
+.container p a:link {
   color: #656566;
 }
 
-.header p a:visited {
+.container p a:visited {
   color: #656566;
 }
 
-.header p a:hover {
+.container p a:hover {
   color: #dbdde0;
   transition: all 200ms ease-out;
   animation-duration: 5s;
@@ -111,6 +109,11 @@ p {
   margin-inline: auto;
 }
 
+.card h5 {
+  margin: 0;
+  text-align: left;
+}
+
 .card p {
   font-size: x-small;
   font-weight: bold;
@@ -126,17 +129,22 @@ p {
 .card img {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 2px 4px 'rgba(0, 0, 0.11)';
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.119);
 }
 
-.text-b {
-  text-align: center;
+.card:hover {
+  transition: all 200ms ease-out;
+  transform: scale(1.05);
 }
 
 .profile {
   padding: 10px;
   background-color: #dbdde0;
   border-radius: 10px;
+}
+
+.text-b {
+  text-align: center;
 }
 
 .container-p {
@@ -161,17 +169,21 @@ p {
   margin-inline: 0;
   font-size: small;
   font-weight: bold;
-  color: #dadbdc;
   text-align: center;
   background-color: #fafaf5;
-
-  & p {
-    padding-inline: 0;
-    margin-inline: 0;
-    text-align: left;
-  }
 }
 
-.container-b --nth-2 --nth-3 {
+.container-b p {
+  padding-inline: 0;
+  margin-inline: 0;
+  color: #d1d1d1;
+  text-align: left;
+}
+
+.container-b .nth-2 {
+  margin-top: 10px;
+}
+
+.container-b .nth-3 {
   margin-top: 10px;
 }

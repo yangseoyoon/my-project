@@ -57,24 +57,35 @@ p {
   text-align: center;
 }
 
-& p {
-  a:link {
-    color: #656566;
-  }
+.header {
+  display: flex;
+  padding-block: 5px;
+  padding-inline: 0;
+  margin-inline: 0;
+  margin-bottom: 40px;
+  font-size: medium;
+  background-color: #dbdde0;
+}
 
-  a:visited {
-    color: #656566;
-  }
-
-  a:hover {
-    color: #dbdde0;
-    transition: all 200ms ease-out;
-    animation-duration: 5s;
-  }
-
+.container p {
+  display: flex;
   margin-inline: 10px;
   margin-bottom: 0;
   color: #656566;
+}
+
+.container p a:link {
+  color: #656566;
+}
+
+.container p a:visited {
+  color: #656566;
+}
+
+.container p a:hover {
+  color: #dbdde0;
+  transition: all 200ms ease-out;
+  animation-duration: 5s;
 }
 
 .main-archive {
@@ -98,34 +109,34 @@ p {
   padding-inline: 20px;
   margin-block: auto;
   margin-inline: auto;
+}
 
-  & h5 {
-    margin: 0;
-    text-align: left;
-  }
+.card h5 {
+  margin: 0;
+  text-align: left;
+}
 
-  & p {
-    font-size: x-small;
-    font-weight: bold;
-    text-align: left;
-  }
+.card p {
+  font-size: x-small;
+  font-weight: bold;
+  text-align: left;
+}
 
-  figure {
-    position: relative;
-    margin: 20px 0;
-    overflow: hidden;
-  }
+.card figure {
+  position: relative;
+  margin: 20px 0;
+  overflow: hidden;
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 11.9%);
-  }
+.card img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 11.9%);
+}
 
-  &:hover {
-    transition: all 200ms ease-out;
-    transform: scale(1.05);
-  }
+.card:hover {
+  transition: all 200ms ease-out;
+  transform: scale(1.05);
 }
 
 .profile {
@@ -138,7 +149,7 @@ p {
   text-align: center;
 }
 
-.container-ps {
+.container-p {
   padding-inline: 0;
   margin-top: 100px;
   font-size: medium;
@@ -160,21 +171,21 @@ p {
   margin-inline: 0;
   font-size: small;
   font-weight: bold;
-  color: #dadbdc;
   text-align: center;
   background-color: #fafaf5;
-
-  & p {
-    padding-inline: 0;
-    margin-inline: 0;
-    text-align: left;
-  }
 }
 
-.container-b --nth-2 {
+.container-b p {
+  padding-inline: 0;
+  margin-inline: 0;
+  color: #d1d1d1;
+  text-align: left;
+}
+
+.container-b .nth-2 {
   margin-top: 10px;
 }
 
-.container-b --nth-3 {
+.container-b .nth-3 {
   margin-top: 10px;
 }
