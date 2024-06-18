@@ -36,55 +36,45 @@ p {
 
 .animated-text {
   display: inline-block;
-  padding-right: 100%;
-  animation: scrollText 20s linear infinite;
+  padding-left: 100%;
+  animation: scrolltext 10s linear infinite;
 }
 
-@keyframes scrollText {
+@keyframes scrolltext {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
 
-.header {
-  display: flex;
-  padding-block: 5px;
-  padding-inline: 0;
-  margin-inline: 0;
-  margin-bottom: 40px;
-  font-size: medium;
-  background-color: #dbdde0;
+.container {
+  max-width: 100%;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+  text-align: center;
+}
 
-  .container {
-    max-width: 100%;
-    padding-inline: 1.5rem;
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  & p {
-    a:link {
-      color: #656566;
-    }
-
-    a:visited {
-      color: #656566;
-    }
-
-    a:hover {
-      color: #dbdde0;
-      transition: all 200ms ease-out;
-      animation-duration: 5s;
-    }
-
-    margin-inline: 10px;
-    margin-bottom: 0;
+& p {
+  a:link {
     color: #656566;
   }
+
+  a:visited {
+    color: #656566;
+  }
+
+  a:hover {
+    color: #dbdde0;
+    transition: all 200ms ease-out;
+    animation-duration: 5s;
+  }
+
+  margin-inline: 10px;
+  margin-bottom: 0;
+  color: #656566;
 }
 
 .main-archive {
@@ -138,17 +128,17 @@ p {
   }
 }
 
-.text-B {
-  text-align: center;
-}
-
 .profile {
   padding: 10px;
   background-color: #dbdde0;
   border-radius: 10px;
 }
 
-.container-P {
+.text-b {
+  text-align: center;
+}
+
+.container-ps {
   padding-inline: 0;
   margin-top: 100px;
   font-size: medium;
@@ -162,7 +152,7 @@ p {
   text-align: right;
 }
 
-.container-B {
+.container-b {
   display: flex;
   gap: 50px;
   justify-content: center;
@@ -181,6 +171,10 @@ p {
   }
 }
 
-.container-B --nth-2 --nth-3 {
+.container-b --nth-2 {
+  margin-top: 10px;
+}
+
+.container-b --nth-3 {
   margin-top: 10px;
 }

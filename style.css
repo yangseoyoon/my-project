@@ -37,17 +37,19 @@ p {
 .animated-text {
   display: inline-block;
   padding-right: 100%;
-  animation: scrollText 20s linear infinite;
+  animation: scrolltext 20s linear infinite;
 }
 
-@keyframes scrollText {
+@keyframes scrolltext {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
 }
+
 .header {
   display: flex;
   padding-block: 5px;
@@ -57,23 +59,29 @@ p {
   font-size: medium;
   background-color: #dbdde0;
 }
-.header .container {
+
+.container,
+.header {
   max-width: 100%;
   padding-inline: 1.5rem;
   margin-inline: auto;
   text-align: center;
 }
+
 .header p {
   margin-inline: 10px;
   margin-bottom: 0;
   color: #656566;
 }
+
 .header p a:link {
   color: #656566;
 }
+
 .header p a:visited {
   color: #656566;
 }
+
 .header p a:hover {
   color: #dbdde0;
   transition: all 200ms ease-out;
@@ -102,31 +110,26 @@ p {
   margin-block: auto;
   margin-inline: auto;
 }
-.card h5 {
-  margin: 0;
-  text-align: left;
-}
+
 .card p {
   font-size: x-small;
   font-weight: bold;
   text-align: left;
 }
+
 .card figure {
   position: relative;
   margin: 20px 0;
   overflow: hidden;
 }
+
 .card img {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.119);
-}
-.card:hover {
-  transition: all 200ms ease-out;
-  transform: scale(1.05);
+  box-shadow: 0 2px 4px 'rgba(0, 0, 0.11)';
 }
 
-.text-B {
+.text-b {
   text-align: center;
 }
 
@@ -136,7 +139,7 @@ p {
   border-radius: 10px;
 }
 
-.container-P {
+.container-p {
   padding-inline: 0;
   margin-top: 100px;
   font-size: medium;
@@ -150,7 +153,7 @@ p {
   text-align: right;
 }
 
-.container-B {
+.container-b {
   display: flex;
   gap: 50px;
   justify-content: center;
@@ -161,13 +164,14 @@ p {
   color: #dadbdc;
   text-align: center;
   background-color: #fafaf5;
-}
-.container-B p {
-  padding-inline: 0;
-  margin-inline: 0;
-  text-align: left;
+
+  & p {
+    padding-inline: 0;
+    margin-inline: 0;
+    text-align: left;
+  }
 }
 
-.container-B --nth-2 --nth-3 {
+.container-b --nth-2 --nth-3 {
   margin-top: 10px;
 }
