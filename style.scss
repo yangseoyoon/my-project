@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-size: 1.125rem;
   line-height: 150%;
+  color: #656566;
   background-color: #f5f5f5;
 }
 
@@ -26,56 +27,86 @@ p {
   margin: 0;
 }
 
-.container {
-  max-width: 100%;
-  padding-inline: 1.5rem;
-  margin-inline: auto; //텍스트 가운데로 정렬//
-  text-align: center;
+.animated-title {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animated-text {
+  display: inline-block;
+  padding-right: 100%;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .header {
   display: flex;
+  padding-block: 5px;
   padding-inline: 0;
+  margin-inline: 0;
   margin-bottom: 40px;
-  background-color: black;
+  font-size: medium;
+  background-color: #dbdde0;
+
+  .container {
+    max-width: 100%;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+    text-align: center;
+  }
 
   & p {
     a:link {
-      color: white;
+      color: #656566;
     }
 
     a:visited {
-      color: white;
+      color: #656566;
     }
 
     a:hover {
-      color: black;
+      color: #dbdde0;
+      transition: all 200ms ease-out;
+      animation-duration: 5s;
     }
 
     margin-inline: 10px;
     margin-bottom: 0;
-    color: white;
+    color: #656566;
   }
 }
 
 .main-archive {
   max-width: 100%;
-  padding: 20px;
+  padding: 30px;
+  padding-inline: 50px;
   margin: auto;
 }
 
 .slider {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  background-color: aqua;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 70px;
+  padding: 10px;
+  background-color: #dbdde0;
+  border-radius: 10px;
 }
 
 .card {
-  box-sizing: border-box;
   padding: 0;
-  padding-inline: 40px;
-  margin: 0;
+  padding-inline: 20px;
+  margin-block: auto;
   margin-inline: auto;
 
   & h5 {
@@ -84,7 +115,8 @@ p {
   }
 
   & p {
-    font-size: smaller;
+    font-size: x-small;
+    font-weight: bold;
     text-align: left;
   }
 
@@ -106,22 +138,49 @@ p {
   }
 }
 
+.text-B {
+  text-align: center;
+}
+
+.profile {
+  padding: 10px;
+  background-color: #dbdde0;
+  border-radius: 10px;
+}
+
 .container-P {
+  padding-inline: 0;
+  margin-top: 100px;
+  font-size: medium;
   font-weight: bold;
-  color: #818181;
+  color: #656566;
   text-align: left;
-  background-color: #fafaf5;
+  background-color: #dbdde0;
+}
+
+.profile-tool {
+  text-align: right;
 }
 
 .container-B {
-  font-weight: bolder;
-  color: #818181;
-  text-align: left;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding-inline: 0;
+  margin-inline: 0;
+  font-size: small;
+  font-weight: bold;
+  color: #dadbdc;
+  text-align: center;
   background-color: #fafaf5;
 
   & p {
-    padding-inline: 10px;
-    margin-inline: auto;
+    padding-inline: 0;
+    margin-inline: 0;
     text-align: left;
   }
+}
+
+.container-B --nth-2 --nth-3 {
+  margin-top: 10px;
 }
