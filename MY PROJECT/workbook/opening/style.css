@@ -20,15 +20,19 @@ body {
   padding-block: 0;
   padding-inline: 10px;
 }
-.title h2, .title h3 {
+
+.title h2,
+.title h3 {
   flex: 1;
   margin: 0;
 }
+
 .title h2 {
   position: fixed;
   top: 10px;
   left: 10px;
 }
+
 .title h3 {
   position: fixed;
   top: 10px;
@@ -40,10 +44,12 @@ body {
   .title {
     flex-direction: column;
   }
+
   .title h3 {
     align-self: flex-end;
   }
 }
+
 .img-a {
   margin-top: 20px;
 }
@@ -57,6 +63,7 @@ body {
   text-align: center;
   background-color: #dbdde0;
 }
+
 .container-body p {
   margin-inline: 50px;
   margin-top: 0;
@@ -64,9 +71,11 @@ body {
   font-size: small;
   font-weight: 600;
 }
+
 .container-body h3 {
   margin-top: 40px;
 }
+
 .container-body img {
   margin-top: 0;
   margin-bottom: 0;
@@ -79,6 +88,7 @@ body {
   font-weight: bold;
   text-align: center;
 }
+
 .text-date p {
   margin-bottom: 0;
 }
