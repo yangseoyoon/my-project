@@ -19,37 +19,31 @@ body {
   justify-content: space-between;
   padding-block: 0;
   padding-inline: 10px;
-
-  & h2,
-  & h3 {
-    flex: 1;
-    margin: 0;
-  }
-
-  & h2 {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-  }
-
-  & h3 {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    text-align: right;
-  }
+}
+.title h2, .title h3 {
+  flex: 1;
+  margin: 0;
+}
+.title h2 {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.title h3 {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-align: right;
 }
 
 @media (width <= 600px) {
   .title {
     flex-direction: column;
-
-    & h3 {
-      align-self: flex-end;
-    }
+  }
+  .title h3 {
+    align-self: flex-end;
   }
 }
-
 .img {
   margin-top: 20px;
 }
@@ -62,33 +56,29 @@ body {
   margin-top: 100px;
   text-align: center;
   background-color: #dbdde0;
-
-  & p {
-    margin-inline: 50px;
-    margin-top: 0;
-    margin-bottom: 50px;
-    font-size: small;
-    font-weight: 600;
-  }
-
-  & h3 {
-    margin-top: 40px;
-  }
-
-  & img {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+}
+.container-body p {
+  margin-inline: 50px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: small;
+  font-weight: 600;
+}
+.container-body h3 {
+  margin-top: 40px;
+}
+.container-body img {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.date {
+.text-date {
   margin-top: 80px;
   margin-bottom: 0;
   font-size: small;
   font-weight: bold;
   text-align: center;
-
-  & p {
-    margin-bottom: 0;
-  }
+}
+.text-date p {
+  margin-bottom: 0;
 }

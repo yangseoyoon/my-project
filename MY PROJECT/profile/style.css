@@ -25,3 +25,7 @@ h4,
 p {
   margin: 0;
 }
+
+.container {
+  display: flex;
+}
